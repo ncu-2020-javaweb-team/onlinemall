@@ -51,7 +51,8 @@ public class MessageController extends BaseController {
      * 发表留言进入
      */
     @RequestMapping("/add")
-    public String add(){
+    public String add(Model model){
+        model.addAttribute("type",3);
         return "message/add";
     }
 

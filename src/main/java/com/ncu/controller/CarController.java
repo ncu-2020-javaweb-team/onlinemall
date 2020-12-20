@@ -77,6 +77,7 @@ public class CarController {
         String sql = "select * from car where user_id="+userId+" order by id desc";
         List<Car> list = carService.listBySqlReturnEntity(sql);
         model.addAttribute("list",list);
+        model.addAttribute("type",8);
         return "car/car";
     }
 

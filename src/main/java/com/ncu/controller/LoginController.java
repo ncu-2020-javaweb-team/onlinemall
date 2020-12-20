@@ -101,13 +101,14 @@ public class LoginController extends BaseController {
         //热销商品
         List<Item> rxs = itemService.listBySqlReturnEntity("select * from item where isDelete=0 order by gmNum desc limit 0,10");
         model.addAttribute("rxs",rxs);
-
+        model.addAttribute("type",1);
         return "login/uIndex";
     }
 
     /**普通用户注册*/
     @RequestMapping("/res")
-    public String res(){
+    public String res(Model model){
+        model.addAttribute("type",7);
         return "login/res";
     }
 
@@ -120,7 +121,8 @@ public class LoginController extends BaseController {
 
     /**普通用户登录入口*/
     @RequestMapping("/uLogin")
-    public String uLogin(){
+    public String uLogin(Model model){
+        model.addAttribute("type",6);
         return "login/uLogin";
     }
 
@@ -151,7 +153,7 @@ public class LoginController extends BaseController {
      * 修改密码入口
      */
     @RequestMapping("/pass")
-    public String pass(HttpServletRequest request){
+    public String pass(HttpServletRequest request,Model model){
         Object attribute = request.getSession().getAttribute(Consts.USERID);
         if(attribute==null){
             return "redirect:/login/uLogin";
@@ -159,6 +161,7 @@ public class LoginController extends BaseController {
         Integer userId = Integer.valueOf(attribute.toString());
         User load = userService.load(userId);
         request.setAttribute("obj",load);
+        model.addAttribute("type",7);
         return "login/pass";
     }
 
@@ -183,13 +186,15 @@ public class LoginController extends BaseController {
     }
 
     @RequestMapping("/sLogin")
-    public String sLogin(){
+    public String sLogin(Model model){
+        model.addAttribute("type",5);
         return "login/sLogin";
     }
 
 
     @RequestMapping("/sres")
-    public String sRes(){
+    public String sRes(Model model){
+        model.addAttribute("type",8);
         return "login/sres";
     }
 

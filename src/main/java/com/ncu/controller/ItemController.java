@@ -182,6 +182,7 @@ public class ItemController extends BaseController {
         Seller seller = sellerService.load(sId);
         String sellerName = seller.getSellerName();
         model.addAttribute("sellName",sellerName);
+        model.addAttribute("type",9);
         return "item/view";
     }
 }

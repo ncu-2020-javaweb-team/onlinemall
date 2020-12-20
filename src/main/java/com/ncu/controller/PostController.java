@@ -63,6 +63,7 @@ public class PostController extends BaseController {
         model.addAttribute("pagers",pagers);
         model.addAttribute("obj",post);
         model.addAttribute("code",code);
+        model.addAttribute("type",2);
         return "post/postIndex";
     }
     /**
@@ -165,7 +166,8 @@ public class PostController extends BaseController {
      * 评价
      */
     @RequestMapping("/estimate")
-    public String estimate(){
+    public String estimate(Model model){
+        model.addAttribute("type",4);
         return "post/estimate";
     }
 

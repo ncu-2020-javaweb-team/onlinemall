@@ -13,20 +13,43 @@
         });
     });
 </script>
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <div class="layui-logo">小米导航</div>
-        <ul class="layui-nav  layui-layout-left">
-            <li class="layui-nav-item layui-this"><a href="${ctx}/login/uIndex">首页</a></li>
-            <%--        <li class="layui-nav-item"><a href="${ctx}/news/list">公告</a></li>--%>
-            <li class="layui-nav-item"><a href="${ctx}/message/add">留言</a></li>
-            <li class="layui-nav-item"><a href="${ctx}/community/toPostIndex?code=0">社区</a></li>
-            <li class="layui-nav-item"><a href="#">评价</a></li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
+
+<c:if test="${type==7}">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">小米导航</div>
+            <ul class="layui-nav  layui-layout-left">
+                <li class="layui-nav-item"><a href="${ctx}/login/uIndex">首页</a></li>
+                    <%--        <li class="layui-nav-item"><a href="${ctx}/news/list">公告</a></li>--%>
+                <li class="layui-nav-item"><a href="${ctx}/message/add">留言</a></li>
+                <li class="layui-nav-item"><a href="${ctx}/community/toPostIndex?code=0">社区</a></li>
+                <li class="layui-nav-item"><a href="#">评价</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item"><a href="${ctx}/login/sres">注册商家</a></li>
-                <li class="layui-nav-item"><a href="${ctx}/login/res">注册消费者</a></li>
-        </ul>
+                <li class="layui-nav-item layui-this"><a href="${ctx}/login/res">注册消费者</a></li>
+            </ul>
+        </div>
     </div>
-</div>
+</c:if>
+
+<c:if test="${type==8}">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">小米导航</div>
+            <ul class="layui-nav  layui-layout-left">
+                <li class="layui-nav-item"><a href="${ctx}/login/uIndex">首页</a></li>
+                    <%--        <li class="layui-nav-item"><a href="${ctx}/news/list">公告</a></li>--%>
+                <li class="layui-nav-item"><a href="${ctx}/message/add">留言</a></li>
+                <li class="layui-nav-item"><a href="${ctx}/community/toPostIndex?code=0">社区</a></li>
+                <li class="layui-nav-item"><a href="#">评价</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-this"><a href="${ctx}/login/sres">注册商家</a></li>
+                <li class="layui-nav-item"><a href="${ctx}/login/res">注册消费者</a></li>
+            </ul>
+        </div>
+    </div>
+</c:if>
+
 

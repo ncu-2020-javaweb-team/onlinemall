@@ -90,6 +90,7 @@ public class ItemOrderController extends BaseController {
         model.addAttribute("yqx",yqx);
         model.addAttribute("dsh",dsh);
         model.addAttribute("ysh",ysh);
+        model.addAttribute("type",7);
         return "itemOrder/my";
     }
 

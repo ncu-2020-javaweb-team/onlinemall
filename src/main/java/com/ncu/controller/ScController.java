@@ -57,6 +57,7 @@ public class ScController {
         String sql = "select * from sc where user_id="+userId+" order by id desc";
         Pager<Sc> pagers = scService.findBySqlRerturnEntity(sql);
         model.addAttribute("pagers",pagers);
+        model.addAttribute("type",7);
         return "sc/my";
     }
 

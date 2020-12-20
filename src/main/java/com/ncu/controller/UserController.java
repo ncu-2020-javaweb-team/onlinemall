@@ -52,6 +52,7 @@ public class UserController extends BaseController {
         Integer userId = Integer.valueOf(attribute.toString());
         User obj = userService.load(userId);
         model.addAttribute("obj",obj);
+        model.addAttribute("type",7);
         return "user/view";
     }
 
