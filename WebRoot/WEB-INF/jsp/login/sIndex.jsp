@@ -11,9 +11,9 @@
     <script src="${ctx}/resource/js/pintuer.js"></script>
 </head>
 <body style="background-color: #f2f9fd">
-<div class="header bg-main">
+<div class="header bg-main my">
     <div class="logo margin-big-left fadein-top">
-        <h1>商家后台</h1>
+        <h1 style="color: green">商家后台</h1>
     </div>
     <div class="head-l">
         <a class="button button-little bg-green" href="${ctx}/login/uIndex" target="_blank">
@@ -24,7 +24,7 @@
         </a>
     </div>
 </div>
-<div class="leftnav">
+<div class="leftnav my">
     <div class="leftnav-title"><strong><span class="icon-list">菜单列表</span> </strong></div>
     <h2><span class="icon-user"></span>基本设置 </h2>
     <ul style="display: block">
